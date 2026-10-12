@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: booking-api
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  config:
+    import:
+      - file:./.env[.properties]
+  jpa:
+    hibernate:
+      ddl-auto: validate
