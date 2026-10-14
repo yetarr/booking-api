@@ -47,7 +47,7 @@ class FlywayMigrationTests {
 	}
 
 	@ParameterizedTest
-	@ValueSource(strings = {"Sabrina", "sabrina", " sabrina", "sabrina "})
+	@ValueSource(strings = {"Sabrina", "sabrina", " sabrina", "sabrina ", " sabrina "})
 	void rejectsDuplicateTenantNameIgnoringCaseAndWhitespace(String duplicateName) {
 		template.update("INSERT INTO tenant (id, name) VALUES (?, ?)", UUID.randomUUID(), "Sabrina");
 		var e = Assertions.assertThrows(
