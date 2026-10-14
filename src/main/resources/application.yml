@@ -7,7 +7,7 @@ spring:
     password: ${DB_PASSWORD}
   config:
     import:
-      - file:./.env[.properties]
+      - optional:file:./.env[.properties]
   jpa:
     hibernate:
       ddl-auto: validate
