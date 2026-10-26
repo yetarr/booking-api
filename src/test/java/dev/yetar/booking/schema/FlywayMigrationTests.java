@@ -1,5 +1,6 @@
 package dev.yetar.booking.schema;
 
+import dev.yetar.booking.ContainerizedTest;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,5 +1,6 @@
 package dev.yetar.booking.schema;
 
+import dev.yetar.booking.ContainerizedTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -47,7 +48,7 @@ class AppUserSchemaTests extends ContainerizedTest {
             " sabrina@yetar.dev "
     })
     void rejectsDuplicateTenantNameIgnoringCaseAndWhitespace(String duplicateEmail) {
-        insertAppUser(duplicateEmail);
+        insertAppUser("sabrina@yetar.dev");
         var e = Assertions.assertThrows(
                 DuplicateKeyException.class,
                 () -> insertAppUser(duplicateEmail)

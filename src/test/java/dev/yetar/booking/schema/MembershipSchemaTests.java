@@ -1,5 +1,6 @@
 package dev.yetar.booking.schema;
 
+import dev.yetar.booking.ContainerizedTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

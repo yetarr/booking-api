@@ -1,6 +1,5 @@
-package dev.yetar.booking.schema;
+package dev.yetar.booking;
 
-import dev.yetar.booking.TestcontainersConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
@@ -8,10 +7,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.UUID;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @Import(TestcontainersConfiguration.class)
-@SpringBootTest
+@SpringBootTest(properties = {
+        "logging.level.org.hibernate.SQL = DEBUG"
+})
 public abstract class ContainerizedTest {
 
     @Autowired
